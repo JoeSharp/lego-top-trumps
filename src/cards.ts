@@ -28,6 +28,15 @@ const cards: TopTrumpType[] = [
     cuteness: 7,
     sillyness: 4,
   },
+  {
+    name: "FishStix",
+    image: "https://live.staticflickr.com/7079/7387853018_81498f8bc5_b.jpg",
+    description: "Sometimes forgets how he got here",
+    power: 1,
+    speed: 7,
+    cuteness: 4,
+    sillyness: 7,
+  },
 ];
 
 export default cards;
