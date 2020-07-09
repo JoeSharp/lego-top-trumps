@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+  font-size: xx-large;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.top-trump-collection {
+  width: 40rem;
+  display: flex;
+}
+
+.top-trump {
+  border-radius: 1rem;
+  border: solid thin black;
+  background-color: #9cf734;
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.top-trump__image {
+  width: 100px;
+  height: 100px;
+}
+
+.top-trump__name {
+  font-size: large;
+}
+
+.top-trump__description {
+  font-style: italic;
+}
+
+.top-trump__stat {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  width: 10rem;
+  border: solid thin black;
+  display: flex;
+  justify-items: stretch;
 }
