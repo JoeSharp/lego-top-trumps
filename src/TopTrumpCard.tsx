@@ -3,10 +3,12 @@ import { TopTrumpType } from "./types";
 
 interface Props {
   card: TopTrumpType;
+  statsOrder: string[];
 }
 
 const TopTrumpCard: React.FunctionComponent<Props> = ({
-  card: { name, description, image, power, speed, cuteness, sillyness },
+  statsOrder,
+  card: { name, description, image, stats = {} },
 }) => {
   return (
     <div className="top-trump">
@@ -15,22 +17,12 @@ const TopTrumpCard: React.FunctionComponent<Props> = ({
         <div className="top-trump__name">{name}</div>
         <div className="top-trump__description">{description}</div>
         <table className="top-trump__stat">
-          <tr>
-            <td>Power: </td>
-            <td>{power}</td>
-          </tr>
-          <tr>
-            <td>Speed: </td>
-            <td>{speed}</td>
-          </tr>
-          <tr>
-            <td>Cuteness: </td>
-            <td>{cuteness}</td>
-          </tr>
-          <tr>
-            <td>Sillyness: </td>
-            <td>{sillyness}</td>
-          </tr>
+          {statsOrder.map((stat) => (
+            <tr>
+              <td>{stat}: </td>
+              <td>{stats[stat]}</td>
+            </tr>
+          ))}
         </table>
       </div>
     </div>

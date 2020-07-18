@@ -32,6 +32,7 @@ body {
 }
 
 .top-trump__image {
+  border-radius: 0.5rem;
   height: 300px;
 }
 
@@ -47,5 +48,6 @@ body {
 }
 
 .top-trump__stat td {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 0.7rem;
 }
