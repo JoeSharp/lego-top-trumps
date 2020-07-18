@@ -11,23 +11,27 @@ const TopTrumpCard: React.FunctionComponent<Props> = ({
   return (
     <div className="top-trump">
       <img className="top-trump__image" src={image} alt={`a ${name}`} />
-      <div className="top-trump__name">{name}</div>
-      <div className="top-trump__description">{description}</div>
-      <div className="top-trump__stat">
-        <label>Power: </label>
-        <div>{power}</div>
-      </div>
-      <div className="top-trump__stat">
-        <label>Speed: </label>
-        <div>{speed}</div>
-      </div>
-      <div className="top-trump__stat">
-        <label>Cuteness: </label>
-        <div>{cuteness}</div>
-      </div>
-      <div className="top-trump__stat">
-        <label>Sillyness: </label>
-        <div>{sillyness}</div>
+      <div className="top-trump__details">
+        <div className="top-trump__name">{name}</div>
+        <div className="top-trump__description">{description}</div>
+        <table className="top-trump__stat">
+          <tr>
+            <td>Power: </td>
+            <td>{power}</td>
+          </tr>
+          <tr>
+            <td>Speed: </td>
+            <td>{speed}</td>
+          </tr>
+          <tr>
+            <td>Cuteness: </td>
+            <td>{cuteness}</td>
+          </tr>
+          <tr>
+            <td>Sillyness: </td>
+            <td>{sillyness}</td>
+          </tr>
+        </table>
       </div>
     </div>
   );
