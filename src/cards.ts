@@ -2,6 +2,36 @@ import { TopTrumpType } from "./types";
 
 const cards: TopTrumpType[] = [
   {
+    name: "Wheelarch",
+    image: "./monsters/IMG_20200725_164640.jpg",
+    description: "He can zap between the wheel arches! ",
+  },
+  {
+    name: "Meebles",
+    image: "./monsters/IMG_20200725_164820.jpg",
+    description: "Beaky and Bonnie!",
+  },
+  {
+    name: "Smiley",
+    image: "./monsters/IMG_20200725_164841.jpg",
+    description: "He's got a chocolate bar nose!",
+  },
+  {
+    name: "Sleevewing",
+    image: "./monsters/IMG_20200725_164855.jpg",
+    description: "Full of love and starlight",
+  },
+  {
+    name: "Crazy",
+    image: "./monsters/IMG_20200725_164929.jpg",
+    description: "He's a robot but with a brick separator antenna!",
+  },
+  {
+    name: "Maths",
+    image: "./monsters/IMG_20200725_164950.jpg",
+    description: "She's got a shield so they aren't too close to the screen ",
+  },
+  {
     name: "Robol",
     image: "./monsters/IMG_20200708_175719.jpg",
     description: "He looks like a kangaroo in a jersey!",
