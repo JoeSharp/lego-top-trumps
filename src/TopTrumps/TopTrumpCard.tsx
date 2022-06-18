@@ -6,7 +6,7 @@ interface Props {
   statsOrder: string[];
 }
 
-const TopTrumpCard: React.FunctionComponent<Props> = ({
+const TopTrumpCard: React.FC<Props> = ({
   statsOrder,
   card: { name, description, image, stats = {} },
 }) => {
@@ -17,12 +17,14 @@ const TopTrumpCard: React.FunctionComponent<Props> = ({
         <div className="top-trump__name">{name}</div>
         <div className="top-trump__description">{description}</div>
         <table className="top-trump__stat">
-          {statsOrder.map((stat) => (
-            <tr>
-              <td>{stat}: </td>
-              <td>{stats[stat]}</td>
-            </tr>
-          ))}
+          <tbody>
+            {statsOrder.map((stat) => (
+              <tr key={stat}>
+                <td>{stat}: </td>
+                <td>{stats[stat]}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

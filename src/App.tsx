@@ -1,37 +1,29 @@
 import React from "react";
+import Select from 'react-select'
 
-import cards from "./cards";
-import TopTrumpCard from "./TopTrumpCard";
+import TopTrumpCards from "./TopTrumps/TopTrumpCards";
+import ZooKiMonCards from "./ZooKiMon/ZooKiMonCards";
 
-const POINTS_TO_ALLOCATE: number = 25;
-const PROPERTIES_TO_ALLOCATE: string[] = [
-  "Power",
-  "Speed",
-  "Cuteness",
-  "Silliness",
-];
+const options = [
+  { value: 'zookimon', label: 'Zoo-Ki-Mon' },
+  { value: 'legoTopTrumps', label: 'Lego Top Trumps' }
+]
 
-const scoredCards = cards.map((card) => {
-  card.stats = {};
-  PROPERTIES_TO_ALLOCATE.forEach((prop) => (card.stats![prop] = 1));
+const App: React.FC = () => {
+  const [collection, setCollection] = React.useState(options[0]);
 
-  for (let p = 0; p < POINTS_TO_ALLOCATE; p++) {
-    let property =
-      PROPERTIES_TO_ALLOCATE[
-        Math.floor(Math.random() * PROPERTIES_TO_ALLOCATE.length)
-      ];
-    card.stats[property] += 1;
-  }
+  const onChange = React.useCallback((value) => {
+    setCollection(value);
+  }, [setCollection])
 
-  return { ...card };
-});
+  return (
+    <div>
+      <h1>Pick a Collection</h1>
+      <Select options={options} value={collection} onChange={onChange} />
 
-const App: React.FunctionComponent = () => (
-  <div className="top-trump-collection">
-    {scoredCards.map((card) => (
-      <TopTrumpCard card={card} statsOrder={PROPERTIES_TO_ALLOCATE} />
-    ))}
-  </div>
-);
+      {collection.value === 'legoTopTrumps' && <TopTrumpCards />}
+      {collection.value === 'zookimon' && <ZooKiMonCards />}
+    </div>);
+};
 
 export default App;
